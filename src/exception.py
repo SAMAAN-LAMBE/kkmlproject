@@ -21,10 +21,10 @@ class CustomException(Exception):
     def __str__(self):
         return self.error_message
     
-    if __name__=="main":
-        try:
-            a=1/0
-        except Exception as e:
-            logging.info("Divide by Zero")
-            raise CustomException(e,sys)
+if __name__=="main":
+    try:
+        a=1/0
+    except Exception as e:
+        logging.info("Divide by Zero")
+        raise CustomException(e,sys)
     
